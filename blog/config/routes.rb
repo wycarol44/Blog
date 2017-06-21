@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  
-  resources :articles
-  
-  root 'welcome#index'
+  get 'welcome/index' # tells Rails to map requests to http://localhost:3000/welcome/index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index' # connect the root of the site to a specific controller and action
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -19,6 +15,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :articles
 
   # Example resource route with options:
   #   resources :products do
